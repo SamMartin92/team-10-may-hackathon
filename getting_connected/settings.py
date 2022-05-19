@@ -26,8 +26,9 @@ SECRET_KEY = 'django-insecure-bk@rj94-5r*4^@%l84outkzqbs+mj6)b*9!^ox$=1c*)p(uz=&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
+CSRF_TRUSTED_ORIGINS = ['https://8000-sammartin92-team10mayha-dzaqyfuibkl.ws-eu45.gitpod.io']
 
 # Application definition
 
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
 
     'home',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -83,6 +85,22 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
+ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True
+ACCOUNT_USERNAME_MIN_LENGTH = 5
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = '/'
+ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = True
+ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
+ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 300
+ACCOUNT_SESSION_REMEMBER = None
 
 SITE_ID = 1
 
