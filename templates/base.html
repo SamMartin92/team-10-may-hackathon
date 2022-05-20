@@ -25,7 +25,36 @@
     <title>Connectify | {% block title %}{% endblock %}</title>
   </head>
   <body>
-    {% block page_header %}{% endblock %}
+    {% block page_header %}
+    <header>
+      <!-- navigation -->
+      <nav class="navbar navbar-expand-lg bg-dark navbar-light navbar-dark">
+       <div class="container">
+           <a href="{% url 'home' %}" class="navbar-brand"><i class="fas fa-heartbeat hvr-pulse"> Get <span class="text-warning">Connected</span></i></a>
+           
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+               <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navmenu">
+               <ul class="navbar-nav ms-auto">
+                   <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                   <li class="nav-item"><a href="#" class="nav-link">Quiz</a></li>
+                   <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>
+
+                   {% if request.user.is_authenticated %}
+                    
+                   <li class="nav-item"><a href="{% url 'account_logout' %}" class="nav-link">Logout</a></li>
+                   {% else %}
+                   <li class="nav-item"><a href="{% url 'account_login' %}" class="nav-link">Login</a></li>
+                   <li class="nav-item"><a href="{% url 'account_signup' %}" class="nav-link">Register</a></li>
+                   {% endif %}
+               </ul>
+           </div>
+       </div>
+   </nav>
+   </header>
+    
+    {% endblock %}
 
     {% block content %}{% endblock %}
 
