@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1 class="text-success display-4">Blog Posts</h1>
+    {% for post in posts %}
+        <h4 class="title mt-1">{{ post.title }}</h4>
+        <p class="content">{{ post.content }}</p>
+    {% endfor %}
+{% endblock %}
