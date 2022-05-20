@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block extracss %}
+{% endblock %}
+
+{% block content %}
+        <section>
+            <h1>Scenario's</h1>
+            <p><em>Select the nearest option you will chose to the given example;</em></p>
+        </section>
+        <form action="post">
+            <h3> A child appears to be lost in the street, do you:</h3>
+            <input type="radio" id="q1_1" name="q1" value="1"> <label for="q1_1">To be filled --------</label><br>
+            <input type="radio" id="q1_2" name="q1" value="2"> <label for="q1_2">Stay with them until they are collected</label><br>
+            <input type="radio" id="q1_3" name="q1" value="3"> <label for="q1_3">Blog on social media to find a search party</label><br>
+            <input type="radio" id="q1_4" name="q1" value="4"> <label for="q1_4">Re-assure they will find their parents</label><br>
+            <input type="radio" id="q1_5" name="q1" value="5"> <label for="q1_5">Call local services</label><br><br>
+
+            <h3> You see a retired man attending to his garden, you are likely to:</h3>
+            <input type="radio" id="q2_1" name="q2" value="1"> <label for="q2_1">Check back later to see it's progress</label><br>
+            <input type="radio" id="q2_2" name="q2" value="2"> <label for="q2_2">Gift them with a plant from the local shop</label><br>
+            <input type="radio" id="q2_3" name="q2" value="3"> <label for="q2_3">Ask if they would like help</label><br>
+            <input type="radio" id="q2_4" name="q2" value="4"> <label for="q2_4">Compliment on their work</label><br>
+            <input type="radio" id="q2_5" name="q2" value="5"> <label for="q2_5">Advise some nice flower shops and idea's</label><br><br>
+            
+            <h3>A car has broken down on your street, would you:</h3>
+            <input type="radio" id="q3_1" name="q3" value="1"> <label for="q3_1">Watch as they fix the car</label><br>
+            <input type="radio" id="q3_2" name="q3" value="2"> <label for="q3_2">Offer to use your drive to get them off the road</label><br>
+            <input type="radio" id="q3_3" name="q3" value="3"> <label for="q3_3">Check if they need help</label><br>
+            <input type="radio" id="q3_4" name="q3" value="4"> <label for="q3_4">Avoid making a fuss of them, they will fix it</label><br>
+            <input type="radio" id="q3_5" name="q3" value="5"> <label for="q3_5">Guide them to move the car to a safer place</label><br><br>
+
+            <h3>Your friend needs to borrow some money, the best action is to:</h3>
+            <input type="radio" id="q4_1" name="q4" value="1"> <label for="q4_1">Give them a list of chores, offering money on completion</label><br>
+            <input type="radio" id="q4_2" name="q4" value="2"> <label for="q4_2">Offer them the money</label><br>
+            <input type="radio" id="q4_3" name="q4" value="3"> <label for="q4_3">Talk them through their expenses</label><br>
+            <input type="radio" id="q4_4" name="q4" value="4"> <label for="q4_4">Talk about the situation and how to go forward</label><br>
+            <input type="radio" id="q4_5" name="q4" value="5"> <label for="q4_5">Suggest contact for help and actions</label><br><br>
+
+            <h3>Living next door to a charity shop, you:</h3>
+            <input type="radio" id="q5_1" name="q5" value="1"> <label for="q5_1">Offer help in the evening</label><br>
+            <input type="radio" id="q5_2" name="q5" value="2"> <label for="q5_2">Look to donate items on a regular basis</label><br>
+            <input type="radio" id="q5_3" name="q5" value="3"> <label for="q5_3">Promote the shop to your contacts</label><br>
+            <input type="radio" id="q5_4" name="q5" value="4"> <label for="q5_4">Aim to buy from there frequently</label><br>
+            <input type="radio" id="q5_5" name="q5" value="5"> <label for="q5_5">Make suggestions to improve the shop</label><br><br>
+            
+            <input type="reset" value="Restart"/><br>
+            <input type="submit" value="send"/>
+        </form>
+{% endblock %}
