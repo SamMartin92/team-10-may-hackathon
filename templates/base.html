@@ -39,6 +39,7 @@
                <ul class="navbar-nav ms-auto">
                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
                    <li class="nav-item"><a href="#" class="nav-link">Quiz</a></li>
+                   <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>
 
                    {% if request.user.is_authenticated %}
                     
@@ -55,13 +56,7 @@
     
     {% endblock %}
 
-    {% block content %}
-    <div>
-      
-
-    </div>
-    
-    {% endblock %}
+    {% block content %}{% endblock %}
 
     {% block postloadjs %}{% endblock %}
   </body>
