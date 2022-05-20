@@ -5,3 +5,8 @@ def index(request):
     """ Return homepage"""
 
     return render(request, 'index.html')
+
+def resources(request):
+    """ Return resources page"""
+
+    return render(request, 'resources.html')
