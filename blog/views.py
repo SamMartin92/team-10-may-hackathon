@@ -1,7 +1,9 @@
 """ Imports required by blog app """
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.utils.text import slugify
 from django.contrib import messages
 from .models import Post, Comments
+from .forms import BlogForm
 
 
 def blog_posts(request):
@@ -25,9 +27,45 @@ def post_details(request, slug):
     return render(request, 'blog/post_detail.html', context)
 
 
-def add_post(request):
+def create_post(request):
+    """ Add post view """
+    if request.method == 'POST':
+        # If post method check if post doesn't already exist
+        # and then add if it doesn't
+        form = BlogForm(request.POST)
+        if form.is_valid():
+            instance = form.save(commit=False)
 
-    return render(request, 'blog/add_post.html')
+            try:
+                Post.objects.get(
+                    title__iexact=form.cleaned_data.get("title"))
+                messages.error(request, (
+                    'Blog name taken.'))
+                return redirect(reverse('add_post'))
+
+            except Post.DoesNotExist:
+                instance.author = request.user
+                instance.status = 1
+                instance.slug = slugify(instance.title)
+                instance.save()
+                messages.success(request, 'Successfully added post!')
+                return redirect(reverse('blog'))
+        else:
+            # If form not valid return error
+            messages.error(
+                request, (
+                    'Failed to add post. '
+                    'Please ensure the form is valid.'))
+            return redirect(reverse('add_post'))
+    else:
+        # If not post method render template
+        form = BlogForm()
+
+    template = 'blog/create_post.html'
+    context = {
+        'form': form,
+    }
+    return render(request, template, context)
 
 
 def edit_blog(request, post_id):
