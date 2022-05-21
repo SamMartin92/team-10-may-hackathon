@@ -1,0 +1,7 @@
+.row-space-evenly{
+    justify-content: space-evenly;
+}
+
+.fa-ul > li{
+  list-style-type: none;
+}
