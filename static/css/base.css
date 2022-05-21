@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-.row-space-evenly{
-    justify-content: space-evenly;
-}
 
-.fa-ul > li{
-  list-style-type: none;
-}
-=======
 body {
     margin: 0;
     padding: 0;
@@ -26,7 +18,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(../images/landing-page.png);
+    background: url(../images/hero-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -50,4 +42,70 @@ body {
     margin-top: 1rem;
 }
 
->>>>>>> 5cc2e81be871c533ab3ca50e4d9bac39cbb1b38d
+/*---------Footer*/
+.footer-container{
+    --bs-gutter-x: 0;
+}
+
+footer{
+    position:absolute;
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.footer-logo{
+    color: rgba(255, 255, 255, 0.55);
+    margin-left: 25px;
+    font-size: 25px;
+    padding: 15px;
+}
+
+.footer-ul{
+    display: list-item;
+}
+
+@media only screen and (max-width: 450px){
+    footer{
+        height:auto;
+        display: block;
+        text-align: center;
+    }
+
+    .footer-ul{
+        line-height: 2em;
+    }
+    
+}
+
+@media only screen and (min-width: 1400px){
+    footer{
+        bottom: 0;
+    }
+}
+
+/*------Resources*/
+.row-space-evenly{
+    justify-content: space-evenly;
+}
+
+.resource-row{
+    padding: 25px;
+}
+
+.resource-row li{
+    margin-bottom: 15px;
+}
+
+.fa-ul > li{
+  list-style-type: none;
+}
+
+.fa-li{
+    left:-4em !important;
+}
