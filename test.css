@@ -7,8 +7,6 @@ body{
 .question {
     margin:0 auto;
     width:500px;
-    border-radius:16px;
-    box-shadow: 10px 10px 5px black;
 }
 .question h3 {
     margin-bottom:0;
@@ -27,6 +25,9 @@ body{
     line-height:1.6rem;
     border-right-color:black;
     border-right:10px; 
+    border-radius:0 0 16px 16px;
+    box-shadow: 10px 10px 5px black;
+    
 }
 
 .answers label:hover{
