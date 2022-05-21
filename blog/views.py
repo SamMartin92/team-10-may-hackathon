@@ -70,12 +70,33 @@ def create_post(request):
 
 def edit_blog(request, post_id):
     """ Edit post """
-    post = get_object_or_404(Post, pk=post_id)
+    get_post = get_object_or_404(Post, pk=post_id)
+    if request.method == 'POST':
+        # If post method update post
+        form = BlogForm(request.POST, instance=get_post)
+        if form.is_valid():
+            form.save()
+        else:
+            messages.error(request, (
+                'Failed to update post. '
+                'Please ensure the form is valid.'))
+            return redirect(reverse(
+                'edit_blog', kwargs={'post_id': post_id}))
+
+        messages.success(request, 'Thats updated!')
+        return redirect(reverse('blog'))
+
+    else:
+        # If not post method render template with prefilled form
+        form = BlogForm(instance=get_post)
+
+    template = 'blog/edit_post.html'
     context = {
-        'post': post,
+        'form': form,
+        'post': get_post,
     }
 
-    return render(request, 'blog/edit_post.html', context)
+    return render(request, template, context)
 
 
 def delete_blog(request, post_id):
