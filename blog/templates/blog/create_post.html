@@ -1,0 +1,40 @@
+<!-- Gets code from base.html and loads apps static files  -->
+{% extends 'base.html' %}
+{% load static %}
+
+<!-- Page header image -->
+{% block image %}
+<div class="image-container">
+  <div class="row">
+    <div class="col-12 text-center">
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+<!-- Page content -->
+{% block content %}
+<h2 class="text-center mt-4"> Add Blog Post </h2>
+<div class="row">
+  <div class="text-center col-12">
+    <a href="{% url 'blog' %}" aria-label="Takes you back to blog page">
+      <i class="fas fa-backward" aria-hidden="true"></i> Cancel </a> 
+  </div> 
+  <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+      <form method="POST" action="{% url 'create_post' %}" enctype="multipart/form-data">
+          <!-- Add post form -->
+          {% csrf_token %}
+          <fieldset class="col-10 offset-1">
+              <legend> Add Post</legend>
+                 {{ form.title | as_crispy_field }}
+                 {{ form.content | as_crispy_field }}
+          </fieldset>
+          <div class="text-center">
+              <!-- Add event button -->
+              <button class="btn my-btn btn-md mt-3" type="submit">Add Post</button><br>
+              <a href="{% url 'blog' %}" aria-label="Go back to blog page">Cancel</a>
+          </div>
+      </form>
+  </div>
+</div>
+{% endblock %}
