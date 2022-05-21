@@ -68,6 +68,18 @@ Categorizing for stages of mental health expanded our selection to a broad area 
 4. Positive Outlook
 5. Autonomy
 
+### Purpose
+
+The application is designed to present the user with a questionnaire after creation of an account.
+
+Post-results, our application will display the mental strengths to the user and allocate to a group of people from different categories. 
+Questionnaire is only applicable once to the user, this will not be required on each login.
+
+This unlocks the apps feature to the user, allowing them to blog a post within their selected group.
+Each group will consist of at least one other person from each category. This method has been prefered to encourage different perpectives of a conversation, keeping a positive flow on the selected topic.
+
+As a norm, people are reserved with making conversations with new people, even moreso since the pandemic of COVID-19 rushed across the globe causing a world-wide shutdown of any social life. To break the chain of interacting with people you know, this application is designed to introduce you to a new host of people you are likely to collaborate and support with.
+
 
 ## User Experience (UX)
 
