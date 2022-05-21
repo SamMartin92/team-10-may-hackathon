@@ -59,18 +59,33 @@ footer a{
     color: rgba(255, 255, 255, 0.75);
 }
 
+footer a:hover{
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: underline;
+}
+
 .footer-logo{
-    color: rgba(255, 255, 255, 0.55);
+    color: rgba(255, 255, 255, 0.75);
     margin-left: 25px;
     font-size: 25px;
     padding: 15px;
 }
 
+.align-items-center{
+    text-align: center;
+}
+
+.team-link{
+    font-size: 25px;
+    padding: 15px;
+}
 .footer-ul{
     display: list-item;
 }
 
-@media only screen and (max-width: 450px){
+
+
+@media only screen and (max-width: 575px){
     footer{
         height:auto;
         display: block;
@@ -83,11 +98,6 @@ footer a{
     
 }
 
-@media only screen and (min-width: 1400px){
-    footer{
-        bottom: 0;
-    }
-}
 
 /*------Resources*/
 .row-space-evenly{
@@ -107,5 +117,6 @@ footer a{
 }
 
 .fa-li{
-    left:-4em !important;
+    left:-3em !important;
+    font-size: 22px;
 }
