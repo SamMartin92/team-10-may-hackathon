@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-.row-space-evenly{
-    justify-content: space-evenly;
-}
-
-.fa-ul > li{
-  list-style-type: none;
-}
-=======
 body {
     margin: 0;
     padding: 0;
@@ -50,4 +41,3 @@ body {
     margin-top: 1rem;
 }
 
->>>>>>> 5cc2e81be871c533ab3ca50e4d9bac39cbb1b38d

@@ -11,7 +11,7 @@
             <h1>Scenario's</h1>
             <p><em>Select the nearest option you will chose to the given example;</em></p>
         </section>
-        <form action="post">
+        <form action="post" id="quizForm">
             <h3> A child appears to be lost in the street, do you:</h3>
             <input type="radio" id="q1_1" name="q1" value="1"> <label for="q1_1">To be filled --------</label><br>
             <input type="radio" id="q1_2" name="q1" value="2"> <label for="q1_2">Stay with them until they are collected</label><br>
@@ -50,4 +50,8 @@
             <input type="reset" value="Restart"/><br>
             <input type="submit" value="send"/>
         </form>
+{% endblock %}
+
+{% block postloadjs %}
+        <script src="{% static 'js/quiz.js' %}"
 {% endblock %}
