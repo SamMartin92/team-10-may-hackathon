@@ -111,7 +111,7 @@ This website was created for Soda social and Code institutes Getting connected H
 
 Wireframes were created on Balsamiq (see links below)
 
-* [Mobile]()
+* [Mobile](DT-WIREFRAMES.md)
 * [Tablet]()
 * [Desktop]()
 
@@ -152,7 +152,7 @@ Wireframes were created on Balsamiq (see links below)
     - For storing project.
 6. [Gitpod](https://www.gitpod.io/)
     - Used for editing my code.
-7. [Balsamiq](https://balsamiq.com/)
+7. [Diagrams.net](https://www.diagrams.net/)
     - Wireframe creation
 9. [Am I responsive](http://ami.responsivedesign.is/)
     - This was used to generate the image at the top of this README.
