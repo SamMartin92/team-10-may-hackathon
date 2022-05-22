@@ -40,8 +40,17 @@
                <ul class="navbar-nav ms-auto">
                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
                    <li class="nav-item"><a href="#" class="nav-link">Quiz</a></li>
+
                    <li class="nav-item"><a href="{% url 'resources' %}" class="nav-link">Resources</a></li>
                    <li class="nav-item"><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
+
+
+                   <li class="nav-item"><a href="#" class="nav-link">Find Help</a></li>
+
+                   <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>
+                   <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+
+
 
                    {% if request.user.is_authenticated %}
                     
@@ -82,10 +91,25 @@
 
     <!-- Individual page content gets inserted here -->
     {% block content %}{% endblock %}
-
-    <!-- Any individual page scripts to be inserted here -->
+  
     {% block postloadjs %}
-        <script src="{% static 'js/base.js' %}"></script>
+      <script src="{% static 'js/base.js' %}"></script>
     {% endblock %}
+    <div class="container-fluid footer-container">
+      <footer class="flex-wrap justify-content-between align-items-center py-3 border-top bg-dark">
+        <div class="col-md-4 align-items-center">
+          <i class="fas fa-heartbeat hvr-pulse footer-logo"> Get <span class="text-warning">Connected</span>&copy;</i>
+        </div>
+        <div class="col-md-4 align-items-center team-link">
+          <span><a href="https://github.com/SamMartin92/team-10-may-hackathon" target="_blank"><i class="fab fa-github text-warning"></i> Connect<span class="text-warning">10</span></a></span>
+        </div>
+        <ul class="nav col-md-4 footer-ul">
+          <li class="ms-3"><a href="https://www.mind.org.uk/information-support/tips-for-everyday-living/loneliness/about-loneliness/" target="_blank">Tips to Manage Loneliness</a></li>
+          <li class="ms-3"><a href="https://www.nhs.uk/mental-health/feelings-symptoms-behaviours/feelings-and-symptoms/loneliness-in-older-people/" target="_blank">Loneliness & the Elderly</a></li>
+          <li class="ms-3"><a href="https://www.samaritans.org/ireland/how-we-can-help/contact-samaritan/" target="_blank">Contact Samaritans</a></li>
+        </ul>
+      </footer>
+    </div>
+    <script src="https://kit.fontawesome.com/6720c109a5.js" crossorigin="anonymous"></script>
   </body>
 </html>
