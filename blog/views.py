@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.utils.text import slugify
 from django.contrib import messages
 from .models import Post, Comments
-from .forms import BlogForm
+from .forms import BlogForm, CommentForm
 
 
 def blog_posts(request):
@@ -109,5 +109,33 @@ def delete_blog(request, post_id):
 
 def add_comment(request, post_id):
     """ Add comment to blog functionality """
-
-    return render(request, "blog/add_comment.html")
+    if request.method == 'POST':
+        # If post method check if post doesn't already exist
+        # and then add if it doesn't
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            post = get_object_or_404(Post, pk=post_id)
+            instance = form.save(commit=False)
+            instance.post = post
+            instance.author = request.user
+            instance.save()
+            messages.success(request, 'Successfully added comment!')
+            return redirect(reverse('blog'))
+        else:
+            # If form not valid return error
+            messages.error(
+                request, (
+                    'Failed to add comment. '
+                    'Please ensure the form is valid.'))
+            return redirect(reverse('add_comment'))
+    else:
+        # If not post method render template
+        form = CommentForm()
+    
+    template = 'blog/add_comment.html'
+    get_post = get_object_or_404(Post, pk=post_id)
+    context = {
+        'form': form,
+        'post': get_post
+    }
+    return render(request, template, context)
