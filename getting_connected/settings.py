@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://connectify-nka.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'https://connectify-nka.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-sammartin92-team10mayha-dzaqyfuibkl.ws-eu45.gitpod.io']
 
