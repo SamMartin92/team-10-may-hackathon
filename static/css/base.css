@@ -51,14 +51,14 @@ body {
 .toast {
     overflow: visible;
     background-color: white;
-    border: 3px solid #D05663;
+    border: 3px solid #748B6F;
     border-radius: 8px;
 }
 
 .my-btn {
     background-color: #D05663;
     color: white;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 .image-container {
@@ -70,6 +70,36 @@ body {
 
 .card {
     background-color:#C3CBD6;
+}
+
+.admin i,
+.admin {
+    color: #2A403D;
+    text-decoration: none;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.admin:hover {
+    color: #D05663;
+}
+
+.btn.cancel,
+.read-btn {
+    background-color: #748B6F;
+    color: white;
+    border: 1px solid black;
+}
+
+.cancel-link {
+    color: #2A403D;
+    text-decoration: none;
+}
+
+.my-btn:hover,
+.cancel:hover {
+    background-color: white;
+    color: black;
 }
 
 @media(min-width:500px){
@@ -94,6 +124,15 @@ body {
     .image-container {
         height: 40vh;
         background: url(../images/header.png) no-repeat center -300px;
+        background-size: cover;
+        padding: 0;
+    }
+}
+
+@media(min-width:1300px){
+    .image-container {
+        height: 40vh;
+        background: url(../images/header.png) no-repeat center -400px;
         background-size: cover;
         padding: 0;
     }
