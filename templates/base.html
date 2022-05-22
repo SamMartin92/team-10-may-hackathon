@@ -26,6 +26,8 @@
     <title>Connectify | {% block title %}{% endblock %}</title>
   </head>
   <body>
+    <main>
+      <div class="head-section">
     {% block page_header %}
     <header>
       <!-- navigation -->
@@ -43,9 +45,6 @@
 
                    <li class="nav-item"><a href="{% url 'resources' %}" class="nav-link">Resources</a></li>
                    <li class="nav-item"><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
-
-
-                   <li class="nav-item"><a href="#" class="nav-link">Find Help</a></li>
 
                    {% if request.user.is_authenticated %}
                     
@@ -83,10 +82,11 @@
 
     <!-- Individual page header on an image background gets inserted here -->
     {% block image %}{% endblock %}
-
+    </div>
+    <div class="content-section">
     <!-- Individual page content gets inserted here -->
     {% block content %}{% endblock %}
-  
+    </div>
     {% block postloadjs %}
       <script src="{% static 'js/base.js' %}"></script>
     {% endblock %}
@@ -106,5 +106,6 @@
       </footer>
     </div>
     <script src="https://kit.fontawesome.com/6720c109a5.js" crossorigin="anonymous"></script>
+  </main>
   </body>
 </html>
