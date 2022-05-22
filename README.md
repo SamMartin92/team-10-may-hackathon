@@ -156,6 +156,8 @@ Wireframes were created on Balsamiq (see links below)
 ### Surface
 
  -  #### Colour Scheme
+
+    ![image showing database schema](static/images/color-palette.png)
     
         
 -   #### Typography
@@ -270,7 +272,9 @@ Testing and results can be found [here](TESTING.md)
 -   Content was created by .
 
 ### Media
--    
+-   Photo by MART PRODUCTION: https://www.pexels.com/photo/a-young-woman-video-calling-with-a-laptop-on-a-couch-7606078/ 
+-   Photo by William Fortunato: https://www.pexels.com/photo/smiling-young-ethnic-woman-working-distantly-on-laptop-and-talking-on-smartphone-6393342/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels
+
 ### Acknowledgements
 
 -   

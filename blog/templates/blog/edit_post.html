@@ -17,7 +17,7 @@
 <h2 class="text-center mt-4"> Edit Blog Post </h2>
 <div class="row">
   <div class="text-center col-12">
-    <a href="{% url 'blog' %}" aria-label="Takes you back to blog page">
+    <a href="{% url 'blog' %}" class="btn cancel" aria-label="Takes you back to blog page">
       <i class="fas fa-backward" aria-hidden="true"></i> Cancel </a> 
   </div> 
   <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
@@ -32,7 +32,7 @@
           <div class="text-center">
               <!-- Add event button -->
               <button class="btn my-btn btn-md mt-3" type="submit">Post Changes</button><br>
-              <a href="{% url 'blog' %}" aria-label="Go back to blog page">Cancel</a>
+              <a href="{% url 'blog' %}" class="cancel-link" aria-label="Go back to blog page">Cancel</a>
           </div>
       </form>
   </div>
