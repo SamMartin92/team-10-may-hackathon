@@ -1,6 +1,6 @@
 """ Imports required for forms """
 from django import forms
-from .models import Post
+from .models import Post, Comments
 
 
 class BlogForm(forms.ModelForm):
@@ -19,3 +19,20 @@ class BlogForm(forms.ModelForm):
         self.fields['title'].widget.attrs['autofocus'] = True
         self.fields['content'].widget.attrs['placeholder'] = (
             "e.g Tell us how you're feeling or how your day was.")
+
+
+class CommentForm(forms.ModelForm):
+    """ Create CommentForm class """
+    class Meta:
+        """ Fields to render from model """
+        model = Comments
+        exclude = ('post', 'author', 'created_on')
+
+    def __init__(self, *args, **kwargs):
+        """ Add placeholders and required attribute,
+        set autofocus on first field """
+        super().__init__(*args, **kwargs)
+        self.fields['content'].widget.attrs['required'] = True
+        self.fields['content'].widget.attrs['autofocus'] = True
+        self.fields['content'].widget.attrs['placeholder'] = (
+            "Whats your comment?")
