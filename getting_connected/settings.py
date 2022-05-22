@@ -37,7 +37,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'connectify-nka.herokuapp.com']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-sammartin92-team10mayha-dzaqyfuibkl.ws-eu45.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-sammartin92-team10mayha-2ey4xlb2tuv.ws-eu45.gitpod.io', 'https://connectify-nka.herokuapp.com/']
 
 # Application definition
 
@@ -111,7 +111,6 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 5
