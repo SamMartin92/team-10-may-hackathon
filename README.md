@@ -1,6 +1,6 @@
 # Project Namee
 
-Here is a link to the live project. ()
+Here is a link to the live project. (Https://connectify-nka.herokuapp.com)
 
 This website was created for Soda social and Code institutes Getting connected Hackathon
 
