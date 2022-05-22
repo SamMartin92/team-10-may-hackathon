@@ -230,7 +230,9 @@ footer a:hover{
 
 /*------Resources*/
 .resources-hero{
-    background: url(../images/header.png) no-repeat center center;
+    background: url(../images/resources-hero.jpg) no-repeat center center;
+    background-size: cover;
+    height: 70vh;
 }
 
 .row-space-evenly{
@@ -252,5 +254,32 @@ footer a:hover{
 .fa-li{
     left:-3em !important;
     font-size: 22px;
+}
+
+@media(max-width:500px){
+    .resources-hero {
+        height: 25vh;
+        background: url(../images/resources-hero.jpg) no-repeat center;
+        background-size: cover;
+        padding: 0;
+    }
+}
+
+@media(max-width:750px){
+    .resources-hero {
+        height: 30vh;
+        background: url(../images/resources-hero.jpg) no-repeat center;
+        background-size: cover;
+        padding: 0;
+    }
+}
+
+@media(max-width:1000px){
+    .resources-hero {
+        height: 40vh;
+        background: url(../images/resources-hero.jpg) no-repeat center;
+        background-size: cover;
+        padding: 0;
+    }
 }
 
