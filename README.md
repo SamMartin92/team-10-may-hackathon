@@ -8,6 +8,8 @@ This website was created for Soda social and Code institutes Getting connected H
 
 ## Contents 
 
+- [Aim](#aim)
+    * [Cause](#reason)
 - [User Experience (UX)](#user-experience-ux)
    * [Strategy](#strategy)
    * [User Stories](#user-stories) 
@@ -41,6 +43,42 @@ This website was created for Soda social and Code institutes Getting connected H
    * [Content](#content)
    * [Media](#media)
    * [Acknowledgements](#acknowledgements)
+
+
+## Aim
+
+### Reason
+loneliness is not treated, or viewed as a mental health issue but is known as a large contributor towards further mental health issues. <br>
+Whilst lonliness effects people in different ways, this can influence depression, anxiety, low self-esteem, sleep problems and increased levels of stress.<br><br>
+30.9% of adults (survey of 7.4 million adults) reported their well-being has been effected by the feeling of being lonely over the past 7 years.
+[stats taken from https://www.ons.gov.uk/peoplepopulationandcommunity/wellbeing/bulletins/coronavirusandlonelinessgreatbritain/3aprilto3may2020]
+
+### Target
+To support the connectivity, we look to expand the options of contacts within a virtual network fo people.
+
+Ensuring a positive conversation, we decided the platform is to be made for small groups determined by their mental health strengths. The group will consist of 1 person from each category, opening the conversations/post to different perspectives.
+
+### Research
+Our methodology was inpsired by myers-briggs questionnaire, using ratings of feelings towards a set topic.
+
+Categorizing for stages of mental health expanded our selection to a broad area too wide for creating small groups/pods of users. Refining our categories, we swapped the focus from after-effects of mental health, to the beaviours of a positive mental health. This is broken down to 5 factors;
+1. Positive Self-esteem
+2. Sense of Belonging
+3. Sense of Purpose
+4. Positive Outlook
+5. Autonomy
+
+### Purpose
+
+The application is designed to present the user with a questionnaire after creation of an account.
+
+Post-results, our application will display the mental strengths to the user and allocate to a group of people from different categories. 
+Questionnaire is only applicable once to the user, this will not be required on each login.
+
+This unlocks the apps feature to the user, allowing them to blog a post within their selected group.
+Each group will consist of at least one other person from each category. This method has been prefered to encourage different perpectives of a conversation, keeping a positive flow on the selected topic.
+
+As a norm, people are reserved with making conversations with new people, even moreso since the pandemic of COVID-19 rushed across the globe causing a world-wide shutdown of any social life. To break the chain of interacting with people you know, this application is designed to introduce you to a new host of people you are likely to collaborate and support with.
 
 
 ## User Experience (UX)
