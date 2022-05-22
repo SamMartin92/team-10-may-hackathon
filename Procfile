@@ -1,0 +1,1 @@
+web: gunicorn getting_connected.wsgi:application

@@ -27,10 +27,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url(../images/hero-image.jpg);
+    background: url(../images/landing.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: center -150px;
     filter: brightness(60%);
 }
 .hero-content {
@@ -65,8 +65,104 @@ body {
     margin-top: 5px;
 }
 
-.description-box{
+
+/*---- Toasts  ----*/
+.message-container {
+    position: absolute;
+    top: 140px;
+    right: 15px;
+    z-index: 9999999999;
 }
+.toast {
+    overflow: visible;
+    background-color: white;
+    border: 3px solid #748B6F;
+    border-radius: 8px;
+}
+
+.my-btn {
+    background-color: #D05663;
+    color: white;
+    border: 1px solid black;
+}
+
+.image-container {
+    height: 20vh;
+    background: url(../images/header.png) no-repeat center center;
+    background-size: cover;
+    padding: 0;
+}
+
+.card {
+    background-color:#C3CBD6;
+}
+
+.admin i,
+.admin {
+    color: #2A403D;
+    text-decoration: none;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.admin:hover {
+    color: #D05663;
+}
+
+.btn.cancel,
+.read-btn {
+    background-color: #748B6F;
+    color: white;
+    border: 1px solid black;
+}
+
+.cancel-link {
+    color: #2A403D;
+    text-decoration: none;
+}
+
+.my-btn:hover,
+.cancel:hover {
+    background-color: white;
+    color: black;
+}
+
+@media(min-width:500px){
+    .image-container {
+        height: 25vh;
+        background: url(../images/header.png) no-repeat center -150px;
+        background-size: cover;
+        padding: 0;
+    }
+}
+
+@media(min-width:750px){
+    .image-container {
+        height: 30vh;
+        background: url(../images/header.png) no-repeat center -220px;
+        background-size: cover;
+        padding: 0;
+    }
+}
+
+@media(min-width:1000px){
+    .image-container {
+        height: 40vh;
+        background: url(../images/header.png) no-repeat center -300px;
+        background-size: cover;
+        padding: 0;
+    }
+}
+
+@media(min-width:1300px){
+    .image-container {
+        height: 40vh;
+        background: url(../images/header.png) no-repeat center -400px;
+        background-size: cover;
+        padding: 0;
+    }
+}
+
 /*---------Footer*/
 .footer-container{
     --bs-gutter-x: 0;
