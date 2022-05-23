@@ -33,11 +33,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'connectify-nka.herokuapp.com']
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-sammartin92-team10mayha-2ey4xlb2tuv.ws-eu45.gitpod.io', 'https://connectify-nka.herokuapp.com/']
+CSRF_TRUSTED_ORIGINS = ['https://connectify-nka.herokuapp.com/']
 
 # Application definition
 
