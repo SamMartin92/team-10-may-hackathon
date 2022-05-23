@@ -124,9 +124,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 "points": 1
             }]
         }
-    ]
+    ];
+
+    const suggestions = {
+        "Positive Self Esteem": ['Suggestion...'],
+        "Sense of Belonging": ["Sense of Belonging Suggestion...", ],
+        "Sense of Purpose": ["Sense of Purpose Suggestion..."],
+        "Positive Outlook": ["Positive Outlook Suggestion..."],
+        "Autonomy": ["Autonomy Suggestion..."]
+    }
 
     const form = document.getElementById('quizForm');
+    const resultsSection = document.getElementById('resultsSection');
 
     console.log(data)
     data.forEach((quiz, quizIdx) => {
@@ -140,9 +149,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     form.innerHTML += `
+        <div id="linkDown"></div>
         <input type="reset" value="Restart"/><br>
         <input id="submitQuiz" type="submit" value="Submit"/>
     `;
+
+    const linkDown = document.getElementById('linkDown');
 
     const highestValues = [];
 
@@ -182,6 +194,8 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         emptyResults()
+
+        linkDown.innerHTML += '<h4 class="text-success">See results below!</h4>';
         let positive_self_esteem = 0
         let sense_of_belonging = 0;
         let sense_of_purpose = 0;
@@ -231,7 +245,13 @@ document.addEventListener("DOMContentLoaded", function () {
         getFinalQuizResults(highestResults(allResults))
         finalResults.forEach((res) => form.innerHTML += `<p>${res}</p>`);
 
+        Object.entries(suggestions).forEach((value, key) => {
+            console.log(key, value)
+            if (finalResults.includes(value[0])) {
+                resultsSection.innerHTML += `<h3>${value[0]}</h3>`;
+                value[1].forEach((v) => resultsSection.innerHTML += `<li>${v}</li>`)
+            }
+        });
     });
     console.log(finalResults)
-
 });
