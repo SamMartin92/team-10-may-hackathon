@@ -139,19 +139,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     console.log(data)
     data.forEach((quiz, quizIdx) => {
-        form.innerHTML += `<h3>${quiz.question}</h3>`;
+        form.innerHTML += `
+            <div class="question">
+                <h3>${quiz.question}</h3>
+            </div>
+        `;
 
-        quiz.options.forEach((option, opIdx) => {
-            form.innerHTML += `
-                <input type="radio" id="q${quizIdx}_${opIdx}" name="q${quizIdx}" value="${opIdx}"> <label for="q${quizIdx}_${opIdx}">${option.option}</label><br />
-            `;
-        });
+        // const answers = quiz.options.map((option, opIdx) => {
+        //     return `
+        //         <input type="radio" id="q${quizIdx}_${opIdx}" name="q${quizIdx}" value="${opIdx}"> <label for="q${quizIdx}_${opIdx}">${option.option}</label><br />
+        //     `;
+        // });
+
+        form.innerHTML += `
+            <div class="answers">
+                ${quiz.options.map((option, opIdx) => `
+                    <input type="radio" id="q${quizIdx}_${opIdx}" name="q${quizIdx}" value="${opIdx}"> <label for="q${quizIdx}_${opIdx}">${option.option}</label><br />
+                `).join('')}
+            </div>
+        `;
     });
 
     form.innerHTML += `
         <div id="linkDown"></div>
-        <input type="reset" value="Restart"/><br>
-        <input id="submitQuiz" type="submit" value="Submit"/>
+        <div id="quizBtns">
+            <input type="reset" value="Restart"/><br>
+            <input id="submitQuiz" type="submit" value="Submit"/>
+        </div>
     `;
 
     const linkDown = document.getElementById('linkDown');
@@ -189,11 +203,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     let finalResults = [];
 
-    const emptyResults = () => finalResults = [];
-
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        emptyResults()
+        finalResults = [];
 
         linkDown.innerHTML += '<h4 class="text-success">See results below!</h4>';
         let positive_self_esteem = 0
@@ -252,6 +264,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 value[1].forEach((v) => resultsSection.innerHTML += `<li>${v}</li>`)
             }
         });
+        const quizBtns = document.getElementById('quizBtns');
+        quizBtns.style.display = 'none';
     });
     console.log(finalResults)
 });
