@@ -145,17 +145,17 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         `;
 
-        const answers = quiz.options.map((option, opIdx) => {
-            return `
-                <input type="radio" id="q${quizIdx}_${opIdx}" name="q${quizIdx}" value="${opIdx}"> <label for="q${quizIdx}_${opIdx}">${option.option}</label><br />
-            `;
-        });
+        // const answers = quiz.options.map((option, opIdx) => {
+        //     return `
+        //         <input type="radio" id="q${quizIdx}_${opIdx}" name="q${quizIdx}" value="${opIdx}"> <label for="q${quizIdx}_${opIdx}">${option.option}</label><br />
+        //     `;
+        // });
 
         form.innerHTML += `
             <div class="answers">
                 ${quiz.options.map((option, opIdx) => `
                     <input type="radio" id="q${quizIdx}_${opIdx}" name="q${quizIdx}" value="${opIdx}"> <label for="q${quizIdx}_${opIdx}">${option.option}</label><br />
-                `)}
+                `).join('')}
             </div>
         `;
     });
