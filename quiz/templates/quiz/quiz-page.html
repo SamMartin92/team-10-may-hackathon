@@ -11,8 +11,23 @@
             <h1>Scenario's</h1>
             <p><em>Select the nearest option you will chose to the given example;</em></p>
         </section>
-        <form action="post">
-            <h3> A child appears to be lost in the street, do you:</h3>
+        <section>
+                <form action="post" id="quizForm"></form>
+        </section>
+        <section id="resultsSection">
+                <ul id="suggestionList">
+
+                </ul>
+        </section>
+{% endblock %}
+
+{% block postloadjs %}
+        <script src="{% static 'js/quiz.js' %}"></script>
+{% endblock %}
+
+{% comment %} 
+
+        <h3> A child appears to be lost in the street, do you:</h3>
             <input type="radio" id="q1_1" name="q1" value="1"> <label for="q1_1">To be filled --------</label><br>
             <input type="radio" id="q1_2" name="q1" value="2"> <label for="q1_2">Stay with them until they are collected</label><br>
             <input type="radio" id="q1_3" name="q1" value="3"> <label for="q1_3">Blog on social media to find a search party</label><br>
@@ -46,8 +61,4 @@
             <input type="radio" id="q5_3" name="q5" value="3"> <label for="q5_3">Promote the shop to your contacts</label><br>
             <input type="radio" id="q5_4" name="q5" value="4"> <label for="q5_4">Aim to buy from there frequently</label><br>
             <input type="radio" id="q5_5" name="q5" value="5"> <label for="q5_5">Make suggestions to improve the shop</label><br><br>
-            
-            <input type="reset" value="Restart"/><br>
-            <input type="submit" value="send"/>
-        </form>
-{% endblock %}
+ {% endcomment %}
