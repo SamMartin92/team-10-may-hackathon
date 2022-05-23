@@ -289,6 +289,7 @@ Advice summaries
 ### Media
 -   Photo by MART PRODUCTION: (https://www.pexels.com/photo/a-young-woman-video-calling-with-a-laptop-on-a-couch-7606078/) 
 -   Photo by William Fortunato: (https://www.pexels.com/photo/smiling-young-ethnic-woman-working-distantly-on-laptop-and-talking-on-smartphone-6393342/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
+-   Photo by Andrea Piacquadioa: https://www.pexels.com/photo/cheerful-senior-mother-and-adult-daughter-using-smartphone-together-3791664/
 
 ### Acknowledgements
 Thanks to CI and Trust in Soda for organising the hackathon.

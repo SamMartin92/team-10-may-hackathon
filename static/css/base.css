@@ -255,6 +255,18 @@ footer a:hover {
     justify-content: center;
 }
 
+.resources-hero-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-text-bg{
+    background-color: rgba(0,0,0,0.5);
+    padding: 10px;
+    border-radius: 10px;
+}
+
 .row-space-evenly {
     justify-content: space-evenly;
 }
@@ -294,7 +306,7 @@ footer a:hover {
         background: url(../images/resources-hero.jpg) no-repeat center;
         background-size: cover;
         padding: 0;
-        display: flex;
+         display: flex;
         flex-direction: column;
         justify-content: center;
     }
@@ -311,3 +323,61 @@ footer a:hover {
         justify-content: center;
     }
 }
+
+/* Quiz CSS */
+#questionnaire {
+    margin:0 auto;
+    text-align:center;
+    font-family:"Cormorant Garamond", sans-serif;
+}
+
+.question {
+    margin:0 auto;
+    width:500px;
+}
+.question h3 {
+    margin-bottom:0;
+    background-color:white;
+    height:50px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    border-top-left-radius: 16px;
+    border-top-right-radius:16px;
+}
+.answers{
+    text-align:left;
+    background-color:whitesmoke;
+    padding:1rem 0 0 .8rem;
+    line-height:1.6rem;
+    border-right-color:black;
+    border-right:10px; 
+    border-radius:0 0 16px 16px;
+    box-shadow: 10px 10px 5px black;
+    
+}
+
+.answers label:hover{
+    color:darkgreen;
+    background-color:white;
+    font-weight: 600;
+} 
+
+#buttons {
+    margin:0 auto;
+    width:450px;
+}
+
+#submit,#restart {
+    margin:0 auto;
+    display:inline-block;
+    padding: 0 15px 20px 15px;
+}
+
+#submit{
+    float:left;
+}
+#restart{
+    float:right;
+}
+
