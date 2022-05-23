@@ -128,10 +128,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const form = document.getElementById('quizForm');
 
-    const results = (points) => {
-
-    }
-
     console.log(data)
     data.forEach((quiz, quizIdx) => {
         form.innerHTML += `<h3>${quiz.question}</h3>`;

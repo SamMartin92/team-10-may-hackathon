@@ -26,29 +26,26 @@
     <title>Connectify | {% block title %}{% endblock %}</title>
   </head>
   <body>
+    <main>
+      <div class="head-section">
     {% block page_header %}
     <header>
       <!-- navigation -->
       <nav class="navbar navbar-expand-lg bg-dark navbar-light navbar-dark">
        <div class="container">
-           <a href="{% url 'home' %}" class="navbar-brand"><i class="fas fa-heartbeat hvr-pulse"> Get <span class="text-warning">Connected</span></i></a>
+           <a href="{% url 'home' %}" class="navbar-brand"><i class="fab fa-spotify"> <span class="text-warning">Connectify</span></i></a>
            
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
                <span class="navbar-toggler-icon"></span>
            </button>
            <div class="collapse navbar-collapse" id="navmenu">
                <ul class="navbar-nav ms-auto">
-                   <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                   <li class="nav-item"><a href="#" class="nav-link">Quiz</a></li>
-
-                   <li class="nav-item"><a href="#" class="nav-link">Find Help</a></li>
-
-                   <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>
-                   <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
-
+                   <li class="nav-item"><a href="{% url 'home' %}" class="nav-link">Home</a></li>
+                   <li class="nav-item"><a href="{% url 'resources' %}" class="nav-link">Resources</a></li>
 
                    {% if request.user.is_authenticated %}
-                    
+                   <li class="nav-item"><a href="#" class="nav-link">Quiz</a></li>
+                   <li class="nav-item"><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
                    <li class="nav-item"><a href="{% url 'account_logout' %}" class="nav-link">Logout</a></li>
                    {% else %}
                    <li class="nav-item"><a href="{% url 'account_login' %}" class="nav-link">Login</a></li>
@@ -62,13 +59,39 @@
     
     {% endblock %}
 
-    {% block content %}{% endblock %}
+    <!-- Display messages -->
+    {% if messages %}
+    <div class="message-container">
+        {% for message in messages %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
+        {% endfor %}
+    </div>
+    {% endif %}
 
-    {% block postloadjs %}{% endblock %}
+    <!-- Individual page header on an image background gets inserted here -->
+    {% block image %}{% endblock %}
+    </div>
+    <div class="content-section">
+    <!-- Individual page content gets inserted here -->
+    {% block content %}{% endblock %}
+    </div>
+    {% block postloadjs %}
+      <script src="{% static 'js/base.js' %}"></script>
+    {% endblock %}
     <div class="container-fluid footer-container">
       <footer class="flex-wrap justify-content-between align-items-center py-3 border-top bg-dark">
         <div class="col-md-4 align-items-center">
-          <i class="fas fa-heartbeat hvr-pulse footer-logo"> Get <span class="text-warning">Connected</span>&copy;</i>
+          <i class="fab fa-spotify footer-logo"><span class="text-warning"> Connectify</span>&copy;</i>
         </div>
         <div class="col-md-4 align-items-center team-link">
           <span><a href="https://github.com/SamMartin92/team-10-may-hackathon" target="_blank"><i class="fab fa-github text-warning"></i> Connect<span class="text-warning">10</span></a></span>
@@ -81,5 +104,6 @@
       </footer>
     </div>
     <script src="https://kit.fontawesome.com/6720c109a5.js" crossorigin="anonymous"></script>
+  </main>
   </body>
 </html>

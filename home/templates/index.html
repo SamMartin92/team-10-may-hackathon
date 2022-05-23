@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% load static %}
 
 {% block content %}
@@ -8,15 +7,36 @@
     <div class="hero-content">
     
        <h1 class="hero-title">
-            Get connected!
+          <i class="fab fa-spotify"> Connectify </i>
        </h1>
          
        <h2 class="hero-subtitle">
             Beat loneliness with our personality quiz and connect with others.
        </h2>
-                 
+       {% if request.user.is_authenticated %}
+       <a class="btn btn-danger btn-xl test-button" href="#">Take the Test</a>  
+       {% else %}
+       <a class="btn btn-danger btn-xl test-button" href="{% url 'account_signup' %}">Register</a>  
+       {% endif %}
     </div>
 
+  </section>
+  <section class="container">
+     <div class="row about-row" id="about">
+         <div class="col-10 offset-1 col-md-6 offset-md-3 about">
+             <h3 class="text-center mt-3">About</h3>
+             <p> Everyone has felt lonely, at some time or another. Whether its due to a pandemic, 
+                 or from being surrounded by people that just don't understand you, or because you've 
+                 just had a baby and you have no one to support you. But don't suffer, you are not alone! 
+                 Everyday people are struggling, whether it be loneliness, depression or anxiety
+                 there are so many people feeling the same!<br>
+                 We decided to bring you a space for us all to get the support, understanding 
+                 and connections we're lacking and to ultimately be heard.<br>
+                 Connectify is here to help you build meaningful connections in our community.<br>
+                 Register to take our quiz and to connect with and support others in our community blog.
+             </p>
+          </div>
+     </div>
   </section>
     
 {% endblock %}
