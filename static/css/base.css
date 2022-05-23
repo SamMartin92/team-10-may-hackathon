@@ -242,6 +242,16 @@ footer a:hover {
     justify-content: center;
 }
 
+.resources-hero-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-text-bg{
+    background-color: rgba(0,0,0,0.5);
+}
+
 .row-space-evenly {
     justify-content: space-evenly;
 }
