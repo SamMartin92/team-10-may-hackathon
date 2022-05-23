@@ -38,7 +38,7 @@ main {
     background: url(../images/landing.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center -150px;
+    background-position: center center;
     filter: brightness(60%);
 }
 
@@ -163,6 +163,19 @@ main {
         background-size: cover;
         padding: 0;
     }
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../images/landing.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center -150px;
+        filter: brightness(60%);
+    }
 }
 
 @media(min-width:1300px) {
@@ -281,24 +294,31 @@ footer a:hover {
         background: url(../images/resources-hero.jpg) no-repeat center;
         background-size: cover;
         padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
-@media(max-width:750px){
+@media(max-width:750px) {
     .resources-hero {
         height: 30vh;
         background: url(../images/resources-hero.jpg) no-repeat center;
         background-size: cover;
         padding: 0;
-    }
-}
+         display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-@media(max-width:1000px){
+@media(max-width:1000px) {
     .resources-hero {
         height: 40vh;
         background: url(../images/resources-hero.jpg) no-repeat center;
         background-size: cover;
         padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
 
@@ -358,3 +378,4 @@ footer a:hover {
 #restart{
     float:right;
 }
+
