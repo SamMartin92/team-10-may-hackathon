@@ -2,7 +2,8 @@
 
 Here is a link to the live project. (https://connectify-nka.herokuapp.com)
 
-This website was created for Soda social and Code institutes Getting connected Hackathon
+This website was created for Soda social and Code institutes Getting connected Hackathon.
+Coders were Nat, Rian, David, Debbie and Sam.
 
 ![Image showing the website displayed on different screen sizes]()
 
@@ -265,18 +266,27 @@ Testing and results can be found [here](TESTING.md)
 
 ## Credits
 
+Advice summaries
+- Improving self esteem: (https://www.positivityblog.com/)
+- Sense of belonging: (https://www.psychologytoday.com/
+- Improving sense of purpose: (https://www.improveon.co.uk/www/5-steps-to-a-renewed-sense-of-purpose/)
+- Improving your outlook on life: (https://youcanpym.com/blogs/learn/how-to-have-a-positive-outlook-on-life
+- Improving your sense of autonomy: (https://www.kellylynnssweetsandtreats.com/how-to-improve-your-sense-of-autonomy/)  
+
 ### Code
 -   
 
 
 ### Content
 
--   Content was created by .
+-   Content was created by all team members working together, sharing tasks on the github project board.
 
 ### Media
--   Photo by MART PRODUCTION: https://www.pexels.com/photo/a-young-woman-video-calling-with-a-laptop-on-a-couch-7606078/ 
--   Photo by William Fortunato: https://www.pexels.com/photo/smiling-young-ethnic-woman-working-distantly-on-laptop-and-talking-on-smartphone-6393342/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels
+-   Photo by MART PRODUCTION: (https://www.pexels.com/photo/a-young-woman-video-calling-with-a-laptop-on-a-couch-7606078/) 
+-   Photo by William Fortunato: (https://www.pexels.com/photo/smiling-young-ethnic-woman-working-distantly-on-laptop-and-talking-on-smartphone-6393342/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
 
 ### Acknowledgements
+Thanks to CI and Trust in Soda for organising the hackathon.
+Thanks to all team members for their valued contributions and hard work coding!
 
 -   
