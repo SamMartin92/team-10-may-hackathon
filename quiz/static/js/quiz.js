@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const data = [{
             "question": "A child appears to be lost in the street, do you:",
             "options": [{
-                    "option": "To be filled --------",
+                    "option": "Look up and down the street for their parents",
                     "type": "Positive Self Esteem",
                     "points": 1
                 },
@@ -130,29 +130,22 @@ document.addEventListener("DOMContentLoaded", function () {
         "Positive Self Esteem": ["Talking with some-one at least once a day, could be Friends, Family or even Colleagues. Adding structure by setting the time aside to create this will also support, i.e calling around lunch time.", "Look to become a volunteer at school, charity, hospital and more! (Check with local goverment websites)", "Do not become too reliant on technology or social media's. This creates a fixation of only communicating by texting, messaging or e-mail. Seeing people face to face can include that support you are missing!"],
         "Sense of Belonging": ["Becoming pysyically active increase your self-esteem, helps oyu set goals or challengces and causes chemical changes in your brain to help the positive outlook.", "Don't just sign up for a gym then push yourself to go, find a sport or activity you enjoy and take part. i.e, you will find a 30 minute session is more of a challenge rather than swimming 5 laps of the local swimming pool."],
         "Sense of Purpose": ["Focusing on learning of a new skill promotes self-confidence and self-esteem. Also provides a sense of purpose and a new topic for conversations.", "Youtube, How-To websites and free courses are avaialble for a range of skills to be learnt. From D.I.Y to Cooking, Art/Drawing and Coding.", "Make sure you pick a topic of interest, do not feel pressured into requirement of new qualifications or exams."],
-        "Positive Outlook": ["Giving to others provides a feeling of purpose and self-worth, boosting your positive feeling and sense of reward.", "This does not always include deparing with an item of value, a large contribution is your effort. These include\n- Following with expressing your thanks\n - Spending time with your peers\n -Offering help with your knowledge of the specific topic they are working on\n -Volunteering at local organisations."],
+        "Positive Outlook": ["Giving to others provides a feeling of purpose and self-worth, boosting your positive feeling and sense of reward.", "This does not always include deparing with an item of value, a large contribution is your effort. These include following with expressing your thanks, spending time with your peers, Offering help with your knowledge of the specific topic they are working on, volunteering at local organisations."],
         "Autonomy": ["Don't get overwhelmed with what has happened and about to happen", "Take a step back, or an outside table at a coffee shop and observe", "Look for objects to appreciate, Health, Time, Patience, the weather."]
     }
 
     const form = document.getElementById('quizForm');
     const resultsSection = document.getElementById('resultsSection');
 
-    console.log(data)
     data.forEach((quiz, quizIdx) => {
         form.innerHTML += `
-            <div class="question">
+            <div class="question my-5">
                 <h3>${quiz.question}</h3>
             </div>
         `;
 
-        // const answers = quiz.options.map((option, opIdx) => {
-        //     return `
-        //         <input type="radio" id="q${quizIdx}_${opIdx}" name="q${quizIdx}" value="${opIdx}"> <label for="q${quizIdx}_${opIdx}">${option.option}</label><br />
-        //     `;
-        // });
-
         form.innerHTML += `
-            <div class="answers">
+            <div class="answers p-5 text-center">
                 ${quiz.options.map((option, opIdx) => `
                     <input type="radio" id="q${quizIdx}_${opIdx}" name="q${quizIdx}" value="${opIdx}"> <label for="q${quizIdx}_${opIdx}">${option.option}</label><br />
                 `).join('')}
@@ -161,8 +154,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     form.innerHTML += `
-        <div id="linkDown"></div>
-        <div id="quizBtns">
+        <div id="linkDown" class="my-5"></div>
+        <div id="quizBtns" class="my-5">
             <input type="reset" value="Restart"/><br>
             <input id="submitQuiz" type="submit" value="Submit"/>
         </div>
@@ -185,27 +178,22 @@ document.addEventListener("DOMContentLoaded", function () {
             highestValues.push({
                 [firstKey]: firstVal
             });
-            console.log(firstVal, secondVal, thirdVal);
         } else if (firstVal === secondVal && firstVal !== thirdVal) {
             highestValues.push({
                 [firstKey]: firstVal
             }, {
                 [secondKey]: secondVal
             });
-            console.log(firstVal, secondVal, thirdVal);
         } else {
             highestValues.push("All Equal");
-            console.log(firstVal, secondVal, thirdVal);
         }
 
-        // console.log(highestValues);
         return highestValues
     }
     let finalResults = [];
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        finalResults = [];
 
         linkDown.innerHTML += '<h4 class="text-success">See results below!</h4>';
         let positive_self_esteem = 0
@@ -255,17 +243,15 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
         getFinalQuizResults(highestResults(allResults))
-        finalResults.forEach((res) => form.innerHTML += `<p>${res}</p>`);
+        finalResults.forEach((res) => form.innerHTML += `<p><strong>Type:</strong> ${res}</p>`);
 
         Object.entries(suggestions).forEach((value, key) => {
-            console.log(key, value)
             if (finalResults.includes(value[0])) {
-                resultsSection.innerHTML += `<h3>${value[0]}</h3>`;
+                resultsSection.innerHTML += `<h3 class="mt-5">${value[0]}</h3>`;
                 value[1].forEach((v) => resultsSection.innerHTML += `<li>${v}</li>`)
             }
         });
         const quizBtns = document.getElementById('quizBtns');
         quizBtns.style.display = 'none';
     });
-    console.log(finalResults)
 });
