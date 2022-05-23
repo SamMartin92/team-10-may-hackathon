@@ -15,7 +15,7 @@
             quiz and connect with others.
        </h2>
        {% if request.user.is_authenticated %}
-       <a class="btn btn-danger btn-xl test-button" href="#">Take the Test</a>  
+       <a class="btn btn-danger btn-xl test-button" href="{% url 'quiz_page' %}">Take the Test</a>  
        {% else %}
        <a class="btn btn-danger btn-xl test-button" href="{% url 'account_signup' %}">Register</a>  
        {% endif %}
