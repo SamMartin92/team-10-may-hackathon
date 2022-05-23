@@ -156,8 +156,8 @@ document.addEventListener("DOMContentLoaded", function () {
     form.innerHTML += `
         <div id="linkDown" class="my-5"></div>
         <div id="quizBtns" class="my-5">
-            <input type="reset" value="Restart"/><br>
-            <input id="submitQuiz" type="submit" value="Submit"/>
+            <input type="reset" value="Restart" class="btn btn-outline-primary mb-3"/><br>
+            <input id="submitQuiz" type="submit" class="btn btn-outline-success" value="Submit"/>
         </div>
     `;
 
