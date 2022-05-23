@@ -309,6 +309,8 @@ footer a:hover {
          display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+}
 
 @media(max-width:1000px) {
     .resources-hero {
