@@ -4,27 +4,22 @@ document.addEventListener("DOMContentLoaded", function () {
             "options": [{
                     "option": "Look up and down the street for their parents",
                     "type": "Positive Self Esteem",
-                    "points": 1
                 },
                 {
                     "option": "Stay with them until they are collected",
                     "type": "Sense of Belonging",
-                    "points": 1
                 },
                 {
                     "option": "Blog on social media to find a search party",
                     "type": "Sense of Purpose",
-                    "points": 1
                 },
                 {
                     "option": "Re-assure they will find their parents",
                     "type": "Positive Outlook",
-                    "points": 1
                 },
                 {
                     "option": "Call local services",
                     "type": "Autonomy",
-                    "points": 1
                 }
             ]
         },
@@ -33,23 +28,18 @@ document.addEventListener("DOMContentLoaded", function () {
             "options": [{
                 "option": "Check back later to see it's progress",
                 "type": "Positive Self Esteem",
-                "points": 1
             }, {
                 "option": "Gift them with a plant from the local shop",
                 "type": "Sense of Belonging",
-                "points": 1
             }, {
                 "option": "Ask if they would like help",
                 "type": "Sense of Purpose",
-                "points": 1
             }, {
                 "option": "Compliment on their work",
                 "type": "Positive Outlook",
-                "points": 1
             }, {
                 "option": "Advise some nice flower shops and idea's",
                 "type": "Autonomy",
-                "points": 1
             }]
         },
         {
@@ -57,23 +47,18 @@ document.addEventListener("DOMContentLoaded", function () {
             "options": [{
                 "option": "Watch as they fix the car",
                 "type": "Positive Self Esteem",
-                "points": 1
             }, {
                 "option": "Offer to use your drive to get them off the road",
                 "type": "Sense of Belonging",
-                "points": 1
             }, {
                 "option": "Check if they need help",
                 "type": "Sense of Purpose",
-                "points": 1
             }, {
                 "option": "Avoid making a fuss of them, they will fix it",
                 "type": "Positive Outlook",
-                "points": 1
             }, {
                 "option": "Guide them to move the car to a safer place",
                 "type": "Autonomy",
-                "points": 1
             }]
         },
         {
@@ -81,23 +66,18 @@ document.addEventListener("DOMContentLoaded", function () {
             "options": [{
                 "option": "Give them a list of chores, offering money on completion",
                 "type": "Positive Self Esteem",
-                "points": 1
             }, {
                 "option": "Offer them the money",
                 "type": "Sense of Belonging",
-                "points": 1
             }, {
                 "option": "Talk them through their expenses",
                 "type": "Sense of Purpose",
-                "points": 1
             }, {
                 "option": "Talk about the situation and how to go forward",
                 "type": "Positive Outlook",
-                "points": 1
             }, {
                 "option": "Suggest contact for help and actions",
                 "type": "Autonomy",
-                "points": 1
             }]
         },
         {
@@ -105,23 +85,18 @@ document.addEventListener("DOMContentLoaded", function () {
             "options": [{
                 "option": "Offer help in the evening",
                 "type": "Positive Self Esteem",
-                "points": 1
             }, {
                 "option": "Look to donate items on a regular basis",
                 "type": "Sense of Belonging",
-                "points": 1
             }, {
                 "option": "Promote the shop to your contacts",
                 "type": "Sense of Purpose",
-                "points": 1
             }, {
                 "option": "Aim to buy from there frequently",
                 "type": "Positive Outlook",
-                "points": 1
             }, {
                 "option": "Make suggestions to improve the shop",
                 "type": "Autonomy",
-                "points": 1
             }]
         }
     ];

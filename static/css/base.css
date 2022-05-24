@@ -1,3 +1,59 @@
+:root {
+    --main-color: #f9bc0b;
+}
+
+.light-bg {
+    background-color: #f5f5f5;
+}
+
+.darker-bg {
+    background-color: #49463a;
+}
+
+.about-img {
+    width: 100%;
+    height: 450px;
+    background-image: url('../images/personality-about.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.quiz-info-bg {
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(90deg, rgba(41, 38, 8, 0.5), rgba(41, 38, 8, 0.5)), url('../images/thinker.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.card {
+    background-color: #212529 !important;
+}
+
+.border-color {
+    border-color: var(--main-color) !important;
+}
+
+.resources-bg {
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('../images/thinking-man.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-main-color {
+    color: var(--main-color);
+}
+
+.min-card-height {
+    min-height: 300px;
+}
+
 .row-space-evenly {
     justify-content: space-evenly;
 }
@@ -20,8 +76,8 @@ main {
 
 .hero {
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,11 +90,12 @@ main {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 95vh;
     background: url(../images/landing.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    background-attachment: fixed;
     filter: brightness(60%);
 }
 
@@ -63,9 +120,10 @@ main {
     margin-top: 1rem;
 }
 
-.test-button {
+.home-button {
     color: #fff;
-    background-color: #f4623a;
+    background-color: var(--main-color);
+    /* background-color: #f4623a; */
     padding: 1.25rem 2.25rem;
     font-size: 1rem;
     font-weight: 700;
@@ -73,6 +131,10 @@ main {
     border: none;
     border-radius: 10rem;
     margin-top: 50px;
+}
+
+.line-height {
+    line-height: 27.5px;
 }
 
 
@@ -164,17 +226,7 @@ main {
         padding: 0;
     }
     .hero::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url(../images/landing.png);
-        background-repeat: no-repeat;
-        background-size: cover;
         background-position: center -150px;
-        filter: brightness(60%);
     }
 }
 
