@@ -29,7 +29,7 @@
     background-attachment: fixed;
 }
 
-.card {
+.card-color {
     background-color: #212529 !important;
 }
 
@@ -40,10 +40,11 @@
 .resources-bg {
     width: 100%;
     height: auto;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('../images/thinking-man.jpg');
+    background-color: #262e35;
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('../images/thinking-man.jpg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 
 .text-main-color {
@@ -51,7 +52,7 @@
 }
 
 .min-card-height {
-    min-height: 300px;
+    min-height: 323px;
 }
 
 .row-space-evenly {
@@ -68,10 +69,11 @@ body {
 }
 
 main {
-    height: 100vh;
+    height: 87.5vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: #f9f9f9;
 }
 
 .hero {
